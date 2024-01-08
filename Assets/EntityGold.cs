@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class EntityGold : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] public int _gold;
+    [SerializeField] TextMeshProUGUI _goldText;
+    
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (_goldText != null)
+        {
+            _goldText.text = "Gold : " + $"{_gold}";
+        }
     }
 }

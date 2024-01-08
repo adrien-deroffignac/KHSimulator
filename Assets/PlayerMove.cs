@@ -22,8 +22,8 @@ public class PlayerMove : MonoBehaviour
     // Event pour les GD
     [SerializeField] UnityEvent _onEvent;
     [SerializeField] UnityEvent _onEventPost;
-
     public Vector2 JoystickDirection { get; private set; }
+    public bool IsMoving { get; private set; }
     Coroutine MovementRoutine { get; set; }
 
 
@@ -41,8 +41,8 @@ public class PlayerMove : MonoBehaviour
         {
             StopCoroutine(MovementRoutine);
         }
-
         MovementRoutine = StartCoroutine(Move());
+        IsMoving = true;
         OnStartMove?.Invoke();
     }
 
@@ -63,6 +63,7 @@ public class PlayerMove : MonoBehaviour
         {
             StopCoroutine(MovementRoutine);
         }
+        IsMoving = false; 
     }
 
     private void OnDestroy()

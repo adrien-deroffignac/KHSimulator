@@ -1,18 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Gold : Item
 {
-    // Start is called before the first frame update
+    [SerializeField] EntityGold _entityGold;
     void Start()
     {
-        
+        _entityGold = FindObjectOfType<EntityGold>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.GetComponent<CapsuleCollider>())
+        {
+            _entityGold._gold += 10;
+            Destroy(gameObject);
+            
+        }
     }
 }

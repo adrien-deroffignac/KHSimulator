@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -761,6 +761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 20
+  _healthText: {fileID: 0}
 --- !u!4 &395592695
 Transform:
   m_ObjectHideFlags: 0
@@ -1176,7 +1177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slider: {fileID: 1044316936}
-  _text: {fileID: 0}
+  _text: {fileID: 1680877072}
   _playerHealth: {fileID: 1349007869}
 --- !u!1 &728913436
 GameObject:
@@ -1847,6 +1848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
+  _healthText: {fileID: 1680877072}
 --- !u!114 &1349007870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1859,6 +1861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfec9e5ecc7c75548a28c3249edc0e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gold: 0
+  _goldText: {fileID: 1667000045}
 --- !u!114 &1349007871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2572,7 +2576,7 @@ GameObject:
   - component: {fileID: 1850274033}
   m_Layer: 0
   m_Name: Physics
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
